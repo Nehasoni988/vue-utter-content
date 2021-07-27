@@ -1,16 +1,37 @@
 {
-  "name": "vue-utter-content",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-service": "~4.5.0",
-    "vue-template-compiler": "^2.6.11"
-  }
+	"name": "vue-utter-content",
+	"description": "This is a speech to text converter build in Vue2. It provides speech translations in all languages.",
+	"version": "0.1.0",
+	"private": false,
+	"author": {
+		"name": "Neha Soni",
+		"email": "nehaswrankar988@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Nehasoni988/vue-utter-content"
+	},
+	"bugs": "https://github.com/Nehasoni988/vue-utter-content/issues",
+	"keywords": [
+		"vue2",
+		"speech-to-text",
+		"voice-to-text"
+	],
+	"files": [
+		"dist/*"
+	],
+	"main": "./dist/vuc.common.js",
+	"scripts": {
+		"serve": "PORT=8082 vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"build-library": "vue-cli-service build --target lib --name vuc ./src/index.js",
+		"publish-package": "npm run build-library && npm publish --access public"
+	},
+	"dependencies": {
+		"vue": "^2.6.11"
+	},
+	"devDependencies": {
+		"@vue/cli-service": "~4.5.0",
+		"vue-template-compiler": "^2.6.14"
+	}
 }
